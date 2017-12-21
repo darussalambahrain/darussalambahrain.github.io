@@ -32,8 +32,8 @@ body {margin:0;display:block;font-weight: 700; font: 300 normal 15px/1.4 Raleway
 .menuon>.linebar:nth-child(3) {transform: rotate(-130deg);margin-top:-8px;}
 
 /* navigation */
-.nav {border:0; overflow:hidden; height:;width:100%; background-color:#133863;}
-.nav>ul {list-style-type:none; margin:0; padding:0; overflow:hidden; width:350px;margin:auto;}
+.nav {border:0; overflow:hidden; height:;width:100%; background-color:#133863; position:sticky; top:0; position: -webkit-sticky;}
+.nav>ul {list-style-type:none; margin:0; padding:0; overflow:hidden; width:425px;margin:auto;}
 .nav>ul>li {float:left;  display:block; }
 .nav a {padding:10px 12px; display:block; background-color:#133863;position: relative;z-index:2;overflow:hidden;color:white;text-decoration:none;}
 .nav a::after {position: absolute; content: ''; top:0; left: 50%; width: 0;  height: 100%;  background-color:#1259DE; transform-origin:center;  transition:0.25s ease;  z-index:-1;}
@@ -82,8 +82,8 @@ body {margin:0;display:block;font-weight: 700; font: 300 normal 15px/1.4 Raleway
 
 
 
-#slideshow {width:100%; height:500px; overflow:hidden; border:1px solid;}
-.banner {display:none; height:500px; background-position:center center; background-repeat:no-repeat; background-color:black; background-size:80% auto;}
+#slideshow {width:100%; height:400px; overflow:hidden; border:1px solid;}
+.banner {display:none; height:400px; background-position:center center; background-repeat:no-repeat; background-color:black; background-size:auto 100%;}
 .show {display:block;}
 @media only screen and (max-width:768px){
 .banner {background-size:auto 100%;}}
@@ -92,7 +92,12 @@ body {margin:0;display:block;font-weight: 700; font: 300 normal 15px/1.4 Raleway
 .about>h2 {text-align:center; color:red;}
 .about>p {padding:0 20px;}
 
-.section2img>img {margin:auto;}
+.section2 {border:0;}
+.section2a {padding:0 40px;}
+.section2a>h2 {text-align:center; color:red;}
+.section2a>h3 {text-align:; color:;}
+.section2b>img {margin:auto;}
+
 
 
 </style>
@@ -124,6 +129,7 @@ body {margin:0;display:block;font-weight: 700; font: 300 normal 15px/1.4 Raleway
 
 <li><a class="active" href="index.html">Home</a></li>
 <li><a href="about-us.html">About-us</a></li>
+<li><a href="services.html">Services</a></li>
 <li><a href="gallery.html">Gallery</a></li>
 <li><a href="contact-us.html">Contact</a></li>
 
@@ -153,8 +159,75 @@ body {margin:0;display:block;font-weight: 700; font: 300 normal 15px/1.4 Raleway
 </div>
 
 <div class="container section2">
-<div class="col-sm-9">Our Services</div>
-<div class="col-sm-3 section2img"><img class="xs-hidden" src="img/ceo1.jpg"><img class="xs-visible" src="img/ceo2.jpg"></div>
+<div class="col-sm-9 section2a">
+<h2>Our Services</h2>
+<h3>Overview of services</h3>
+<ul>
+<li>Intake Appointment</li>
+<li>Individual Counseling</li>
+<li>Referrals</li>
+<li>Groups</li>
+<li>Couples Counseling</li>
+</ul>
+
+<h3>OUR SERVICES</h3>
+<ul>
+<li>PROPER GUIDANCE FOR PARENTS AND CHILDREN</li>
+<li>SPECIAL PROGRAMS FOR BUSINESS  PEOPLE</li>
+<li>PERSONALITY DEVELOPMENT AND MOLDING A BETTER LIFE STYLE FOR THE MENTALLY DISTURBED</li>
+<li>FAMILY COUNSELING AND PRE MARITAL COUNSELING</li>
+<li>COUNSELING AT INDUSTRIES</li>
+<li>Performance counseling</li>
+<li>Personal and Family Wellbeing</li>
+<li>Other Problems</li>
+<li>Need of counseling at workplace</li>
+<li>ALCOHOL ABUSE</li>
+<li>ANXIETY</li>
+<li>BEHAVIORAL ISSUES</li>
+<li>BIPOLAR DISORDER</li>
+<li>BORDERLINE PERSONALITY DISORDER</li>
+<li>CAREER COUNSELING</li>
+<li>CHRONIC IMPULSIVITY</li>
+<li>CHRONIC PAIN</li>
+<li>CHRONIC RELAPSE</li>
+<li>DEPRESSION</li>
+<li>DIVORCE</li>
+<li>DOMESTIC ABUSE</li>
+<li>DRUG ABUSE</li>
+<li>DUAL DIAGNOSIS</li>
+<li>EMOTIONAL DISTURBANCE</li>
+<li>FAMILY CONFLICT</li>
+<li>GRIEF</li>
+<li>INFIDELITY</li>
+<li>INTERNET ADDICTION</li>
+<li>IQ TESTING</li>
+<li>LEARNING DISABILITIES</li>
+<li>LGBTQ</li>
+<li>LIFE COACHING</li>
+<li>OBESITY</li>
+<li>OBSESSIVE COMPULSIVE (OCD)</li>
+<li>PARENTING</li>
+<li>RELATIONSHIP ISSUES/PROBLEMS</li>
+<li>SELF ESTEEM</li>
+<li>SELF HARMING</li>
+<li>SEXUAL ABUSE</li>
+<li>SLEEP PROBLEMS OR INSOMNIA</li>
+<li>SPIRITUALITY</li>
+<li>SUBSTANCE ABUSE</li>
+<li>SUICIDAL IDEATION</li>
+<li>TRAUMATIC BRAIN INJURY (TBI)</li>
+</ul>
+
+<h3>FOR STUDENTS</h3>
+<ul>
+<li>How to Get Help</li>
+<li>Skills-Based Workshops</li>
+<li>Short-Term Counseling</li>
+</ul>
+
+
+</div>
+<div class="col-sm-3 section2b"><img class="xs-hidden" src="img/ceo1.jpg"><img class="xs-visible" src="img/ceo2.jpg"></div>
 </div>
 
 
