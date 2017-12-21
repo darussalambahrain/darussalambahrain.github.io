@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>NexRise Events</title>
+  <title>Darussalam Public Relations center</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
  <link rel="stylesheet" href="purecss.css">
@@ -11,20 +11,88 @@
 
 <style>
 
+body {margin:0;display:block;font-weight: 700; font: 300 normal 15px/1.4 Raleway,sans-serif;  letter-spacing: .05em;}
+
+.logo {float:left; height:100px; width:200px;}
+.logo2 {float:right; height:100px; width:200px;}
+.contactheader {float:right; text-transform: uppercase; margin-top:22px; padding-right:40px;}
+.contactnumber{ color: #1259DE; font-weight: 700;font-size: 18px;font-family: Lato,sans-serif;}
+
+/* menubar */
+.menuholder{width:50px;height:30px;float:right;margin:25px 15px 0 0;}
+.menu{height:22px;width:50px;}
+.linebar {border-radius: 2px;height:4px;width:40px;background-color:#133863;}
+.linebar:nth-child(1) {margin-bottom:5px;transition: .5s;}
+.linebar:nth-child(2) {margin-bottom:5px;transition: .5s;}
+.linebar:nth-child(3) {transition: .5s;}
+.menuon{height:30px;width:40px;}
+.menuon>.linebar {margin-left:-5px;margin-right:-10px;}
+.menuon>.linebar:nth-child(1) {transform: rotate(130deg);margin-top:13px;margin-bottom:-5px;}
+.menuon>.linebar:nth-child(2) {opacity: 0;}
+.menuon>.linebar:nth-child(3) {transform: rotate(-130deg);margin-top:-8px;}
+
 /* navigation */
+.nav {border:0; overflow:hidden; height:;width:100%; background-color:#133863;}
+.nav>ul {list-style-type:none; margin:0; padding:0; overflow:hidden; width:350px;margin:auto;}
+.nav>ul>li {float:left;  display:block; }
+.nav a {padding:10px 12px; display:block; background-color:#133863;position: relative;z-index:2;overflow:hidden;color:white;text-decoration:none;}
+.nav a::after {position: absolute; content: ''; top:0; left: 50%; width: 0;  height: 100%;  background-color:#1259DE; transform-origin:center;  transition:0.25s ease;  z-index:-1;}
+.nav a:hover::after {width:100%;left:0;}
+.nav .active {background-color:#1259DE;}
+.dropdown {float:left;}
+.dropdown-content {display:none;position:absolute;min-width:150px;top:122px;z-index:3;}
+@media only screen and (min-width:768px) {.dropdown:hover .dropdown-content {display:block;} }
+@media only screen and (max-width:768px) {
+.nav>ul>li {float:none;}
+.dropdown-content {top:82px;}
+}
+#toggle {width:50px; height:30px; margin-top:3px; overflow:hidden;}
+.a {display:none;}
+.b {display:block;}
+.arrowimg1 {margin-top:-74px;margin-left:5px;}
+.arrowimg2 {margin-top:4px;margin-left:5px;}
+@media only screen and (max-width:768px) {
+.nav, .nav a {background-color:#133863;}
+.nav .active {background-color:#1259DE;}
+.hide {display:none;}
+.show {display:block;}
+.dropdown-content {top:199px;}
+.nav>ul {width:300px;}
+}
 
-/* CONTENT */
-
-body {font: 300 normal 15px/1.4 Raleway,sans-serif;letter-spacing: .05em;}
-
-.firstblock {background-color:#ee6e12;border:0;margin-top:10px;color:white;}
-.center {height:439px; width:100%; background-position:center center;background-repeat:no-repeat;margin:auto;background-size: cover; }
-.secondblock {background-color:#626262;color:white;border:0;margin-top:10px;margin-bottom:10px;}
-
-.col-sm-6 {padding:0;}
-.col-sm-6>p,h2 {padding:10px 40px;text-align: justify;font-weight: 500;letter-spacing: .05em;}
+/* FOOTER */
+.bottomfooter {background-color:#091834;width:100%;text-align:center;color:#e0e0e0;height:80px; overflow:hidden;}
+.bottomfooter li{display:inline;}
+.bottomfooter ul{padding:25px 0 20px 0;}
 
 
+/* social */
+.sm {height:55px; width:55px;}
+.sm:hover {width:60px;margin-left:-3px;}
+
+.section_button {width:400px; border:; overflow:hidden; margin:auto;height:25px;}
+.button {background-color:purple; height:23px; width:23%; color:white;border-radius:8px; margin:0px 1px; text-align:center; float:left; text-decoration:none; padding:1px;}
+.button:hover {background-color:#663399;}
+@media only screen and (max-width:600px) {.section_button {width:100%;}}
+
+.logofooter {display:block; width:250px; height:150px; margin:auto;}
+.logofooter2 {display:block; max-height:100px; width:100%; max-width:500px; margin:auto;}
+
+
+
+
+
+#slideshow {width:100%; height:500px; overflow:hidden; border:1px solid;}
+.banner {display:none; height:500px; background-position:center center; background-repeat:no-repeat; background-color:black; background-size:80% auto;}
+.show {display:block;}
+@media only screen and (max-width:768px){
+.banner {background-size:auto 100%;}}
+
+
+.about>h2 {text-align:center; color:red;}
+.about>p {padding:0 20px;}
+
+.section2img>img {margin:auto;}
 
 
 </style>
@@ -33,11 +101,12 @@ body {font: 300 normal 15px/1.4 Raleway,sans-serif;letter-spacing: .05em;}
 <body>
 
 <header>
-<img src="img/logoeng.png" height="80">
-<img class="xs-hidden logoarb" src="img/logoarb.png" height="80" style="float:right;">
+<img class="logo" src="img/logo.jpg">
+<img class="xs-hidden logo2" src="img/logo2.jpg">
+
 <div class="contactheader xs-hidden">
 <span>Contact Us</span><br>
-<span class="contactnumber">00973-33217569</span>
+<span class="contactnumber">17330786</span>
 </div>
 
 <div class="menuholder xs-visible">
@@ -61,70 +130,42 @@ body {font: 300 normal 15px/1.4 Raleway,sans-serif;letter-spacing: .05em;}
 </ul>
 </div>
 
-<div class="container firstblock">
 
-<div class="col-sm-6">
-<div class="center" style="background-image: url('img/9.jpg');">
+<br>
+
+
+<div class="container" style="border: 0;">
+<div id="slideshow">
+<div class="banner show" style="background-image:url('img/slide1.jpg');"></div>	
+<div class="banner" style="background-image:url('img/slide2.jpg');"></div>
+<div class="banner" style="background-image:url('img/slide3.jpg');"></div>
 </div>
 </div>
 
-
-<div class="col-sm-6">
-<h2>ABOUT US</h2>	
-<p>
-NexRise Events is a global service provider
-with one of the best business intelligence solutions today around the world with competitive Business to Business platforms,
-Focusing towards Business Events, Business Conferences, Business Trainings and Exhibitions.
-</p>
-<p>
-NexRise has quickly evolved to be one of the best premier in event-planning and designing company's based out of GCC.
-Our people is our strongest assets. The team at NexRise is trained and motivated to think out of the box and to be creative in providing solutions 
-</p>
+<br>
+<div class="about">
+<h2>About Our Darussalam counseling center</h2>
+<p>First time in Bahrain from the light of Holy Quran, Hadees and also with scientific methods. You are getting a perfect relaxation and permanent calmness of hearts from misteries and tensions.</p>
+<p>There is no better place to begin your treatment than in one of our clinic. Treatment offered at Darussalam does not only address substance abuse and alcohol dependency but also other psychological issues such as anxiety, post-traumatic stress disorder, depression) and eating disorders among others.</p>
+<p>Whether you need to seek addiction treatment for yourself or a loved one, you will find that  our clinic offer a peaceful setting that is family oriented. With location open 24/7, you can always turn to Darussalam for immediate assistance.</p>
+<p>Darussalam offers a combined range of treatments, from medical attention and psychological care to guidance and inspiration, customising each of our tested and effective methods into a personalised treatment plan that will work best for each individual patient.</p>
+<p>We provide residential primary treatment, secondary care, detox, counselling, interventions and aftercare as well as a dedicated family programme.</p>
 </div>
 
-</div>
-
-
-
-<div class="container secondblock">
-
-
-<div class="col-sm-6">
-<h2>OUR VISION</h2>
-<p>
-NexRise was started to do something more. Our true professional, 360 degree approach,
-clear brand vision and experience of working with clients across the industry segments have made us passionate about delivering
-beyond the expectations. We like to nurture your brand, understand what you have in mind and translate it into a well-planned,
-innovative and well-organized event. 
-</p>
-<p>
-At NexRise, our success is built upon listening, respecting, understanding and complimenting some of the most successful individuals,
-companies and brands around the world. NexRise is well recognized expert in the field of special event-planning,
-training programs, conferences, exhibitions and concert management.
-</p>
-<p>
-We strive to provide true value to our global clientele by promoting their products, services and
-ideologies through our uniquely conceptualized events and marketing solutions.
-</p>
+<div class="container section2">
+<div class="col-sm-9">Our Services</div>
+<div class="col-sm-3 section2img"><img class="xs-hidden" src="img/ceo1.jpg"><img class="xs-visible" src="img/ceo2.jpg"></div>
 </div>
 
 
-<div class="col-sm-6">
-<div class="center" style="background-image: url('img/d3.jpg');">
-</div>
-</div>
+<div class="container" style="border:0; height:; padding-top:10px; background-color:#DEE9FC; overflow:hidden;">
 
-
-</div>
-
-<div class="container" style="border:0; height:; padding-top:10px; background-color:grey; overflow:hidden;">
-
-<div class="col-sm-3 xs-hidden">
-	<img src="img/f.jpg" class="sm" href="https://www.facebook.com/NexRise-Events-SPC-1437870999658149/">
-<!--	<img src="img/t.jpg" class="sm">
-	<img src="img/g.jpg" class="sm"> -->
-	<img src="img/in.jpg" class="sm" href="https://www.linkedin.com/company/13428478/">
-</div>
+	<div class="col-sm-3 xs-hidden">
+	<img src="img/f.jpg" class="sm" href="">
+	<img src="img/t.jpg" class="sm" href="">
+	<img src="img/g.jpg" class="sm" href="">
+	<img src="img/in.jpg" class="sm" href="">
+	</div>
 <div class="col-sm-6" style=""><br>
 	<div class="section_button">
 		<a class="button" href="index.html" >home</a>
@@ -132,17 +173,17 @@ ideologies through our uniquely conceptualized events and marketing solutions.
 		<a class="button" href="events.html" >events</a>
 		<a class="button" href="contact.html" >contact</a>
 	</div><br>
-		<img class="logoengfooter" src="img/logoeng.png">
-		<img class="logoarbfooter" src="img/logoarb.png">
+		<img class="logofooter" src="img/tlogo.png">
+		<img class="logofooter2" src="img/tlogo2.png">
 </div>
-<div class="col-sm-3" style="color:white;">
+<div class="col-sm-3" style="color:#091834;">
 	Flat:91, Building:205, Road:2803,<br>Block:42, Al Seef.<br>Kingdom of Bahrain, <br>Mobile:00973-33217569<br>Email: info@nexrise-events.com
 </div>
 	<div class="col-sm-3 xs-visible">
-	<img src="img/f.jpg" class="sm" href="https://www.facebook.com/NexRise-Events-SPC-1437870999658149/">
-<!--	<img src="img/t.jpg" class="sm">
-	<img src="img/g.jpg" class="sm"> -->
-	<img src="img/in.jpg" class="sm" href="https://www.linkedin.com/company/13428478/">
+	<img src="img/f.jpg" class="sm" href="">
+	<img src="img/t.jpg" class="sm" href="">
+	<img src="img/g.jpg" class="sm" href="">
+	<img src="img/in.jpg" class="sm" href="">
 	</div>
 
 </div>
@@ -185,6 +226,30 @@ $(document).ready(function(){
 	
 
 });
+
+// SLIDES //
+var slide = 0;
+var timer = 3000;
+setTimeout(function(){
+
+var slidenos = document.getElementById("slideshow").children;
+
+if (slide >= slidenos.length-1) {
+	slidenos[slide].classList.remove('show');
+	slide = 0;
+	slidenos[slide].classList.add('show');
+}
+else {
+	slidenos[slide].classList.remove('show');
+	slide++;
+	slidenos[slide].classList.add('show');
+}
+
+console.log(slide, slidenos.length-1);
+
+	setTimeout(arguments.callee, timer);
+}, timer);
+// SLIDES END //
 
 	</script>
 </body>
