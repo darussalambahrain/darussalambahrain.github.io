@@ -13,15 +13,16 @@
 
 body {margin:0;display:block;font-weight: 700; font: 300 normal 15px/1.4 Raleway,sans-serif;  letter-spacing: .05em;}
 
+header {display:block; background-color:#FEF3DC; overflow:hidden;}
 .logo {float:left; height:100px; width:200px;}
 .logo2 {float:right; height:100px; width:200px;}
 .contactheader {float:right; text-transform: uppercase; margin-top:22px; padding-right:40px;}
-.contactnumber{ color: #1259DE; font-weight: 700;font-size: 18px;font-family: Lato,sans-serif;}
+.contactnumber{ color: #342609; font-weight: 700;font-size: 18px;font-family: Lato,sans-serif;}
 
 /* menubar */
 .menuholder{width:50px;height:30px;float:right;margin:25px 15px 0 0;}
 .menu{height:22px;width:50px;}
-.linebar {border-radius: 2px;height:4px;width:40px;background-color:#133863;}
+.linebar {border-radius: 2px;height:4px;width:40px;background-color:#342609;}
 .linebar:nth-child(1) {margin-bottom:5px;transition: .5s;}
 .linebar:nth-child(2) {margin-bottom:5px;transition: .5s;}
 .linebar:nth-child(3) {transition: .5s;}
@@ -32,13 +33,13 @@ body {margin:0;display:block;font-weight: 700; font: 300 normal 15px/1.4 Raleway
 .menuon>.linebar:nth-child(3) {transform: rotate(-130deg);margin-top:-8px;}
 
 /* navigation */
-.nav {border:0; overflow:hidden; height:;width:100%; background-color:#133863; position:sticky; top:0; position: -webkit-sticky;}
+.nav {border:0; overflow:hidden; height:;width:100%; background-color:#342609; position:sticky; top:0; position: -webkit-sticky;}
 .nav>ul {list-style-type:none; margin:0; padding:0; overflow:hidden; width:425px;margin:auto;}
 .nav>ul>li {float:left;  display:block; }
-.nav a {padding:10px 12px; display:block; background-color:#133863;position: relative;z-index:2;overflow:hidden;color:white;text-decoration:none;}
-.nav a::after {position: absolute; content: ''; top:0; left: 50%; width: 0;  height: 100%;  background-color:#1259DE; transform-origin:center;  transition:0.25s ease;  z-index:-1;}
+.nav a {padding:10px 12px; display:block; background-color:#342609;position: relative;z-index:2;overflow:hidden;color:white;text-decoration:none;}
+.nav a::after {position: absolute; content: ''; top:0; left: 50%; width: 0;  height: 100%;  background-color:#FBA90A; transform-origin:center;  transition:0.25s ease;  z-index:-1;}
 .nav a:hover::after {width:100%;left:0;}
-.nav .active {background-color:#1259DE;}
+.nav .active {background-color:#FBA90A;}
 .dropdown {float:left;}
 .dropdown-content {display:none;position:absolute;min-width:150px;top:122px;z-index:3;}
 @media only screen and (min-width:768px) {.dropdown:hover .dropdown-content {display:block;} }
@@ -52,8 +53,8 @@ body {margin:0;display:block;font-weight: 700; font: 300 normal 15px/1.4 Raleway
 .arrowimg1 {margin-top:-74px;margin-left:5px;}
 .arrowimg2 {margin-top:4px;margin-left:5px;}
 @media only screen and (max-width:768px) {
-.nav, .nav a {background-color:#133863;}
-.nav .active {background-color:#1259DE;}
+.nav, .nav a {background-color:#342609;}
+.nav .active {background-color:#FBA90A;}
 .hide {display:none;}
 .show {display:block;}
 .dropdown-content {top:199px;}
@@ -61,7 +62,7 @@ body {margin:0;display:block;font-weight: 700; font: 300 normal 15px/1.4 Raleway
 }
 
 /* FOOTER */
-.bottomfooter {background-color:#091834;width:100%;text-align:center;color:#e0e0e0;height:80px; overflow:hidden;}
+.bottomfooter {background-color:#342609;width:100%;text-align:center;color:#e0e0e0;height:80px; overflow:hidden;}
 .bottomfooter li{display:inline;}
 .bottomfooter ul{padding:25px 0 20px 0;}
 
@@ -75,6 +76,8 @@ body {margin:0;display:block;font-weight: 700; font: 300 normal 15px/1.4 Raleway
 .button:hover {background-color:#663399;}
 @media only screen and (max-width:600px) {.section_button {width:100%;}}
 
+.section9 {border:0; height:; padding-top:10px; background-color:#FEF3DC; overflow:hidden;}
+
 .logofooter {display:block; width:250px; height:150px; margin:auto;}
 .logofooter2 {display:block; max-height:100px; width:100%; max-width:500px; margin:auto;}
 
@@ -83,13 +86,13 @@ body {margin:0;display:block;font-weight: 700; font: 300 normal 15px/1.4 Raleway
 
 
 #slideshow {width:100%; height:400px; overflow:hidden; border:1px solid;}
-.banner {display:none; height:400px; background-position:center center; background-repeat:no-repeat; background-color:black; background-size:auto 100%;}
+.banner {display:none; height:400px; background-position:center center; background-repeat:no-repeat; background-color:#FDCD6D; background-size:auto 100%;}
 .show {display:block;}
 @media only screen and (max-width:768px){
 .banner {background-size:auto 100%;}}
 
 
-.about>h2 {text-align:center; color:red;}
+.about>h2 {text-align:center; color:red; text-transform:uppercase;}
 .about>p {padding:0 20px;}
 
 .section2 {border:0;}
@@ -106,8 +109,8 @@ body {margin:0;display:block;font-weight: 700; font: 300 normal 15px/1.4 Raleway
 <body>
 
 <header>
-<img class="logo" src="img/logo.jpg">
-<img class="xs-hidden logo2" src="img/logo2.jpg">
+<img class="logo" src="img/tlogo.png">
+<img class="xs-hidden logo2" src="img/translogo2.png">
 
 <div class="contactheader xs-hidden">
 <span>Contact Us</span><br>
@@ -142,9 +145,16 @@ body {margin:0;display:block;font-weight: 700; font: 300 normal 15px/1.4 Raleway
 
 <div class="container" style="border: 0;">
 <div id="slideshow">
-<div class="banner show" style="background-image:url('img/slide1.jpg');"></div>	
-<div class="banner" style="background-image:url('img/slide2.jpg');"></div>
-<div class="banner" style="background-image:url('img/slide3.jpg');"></div>
+<div class="banner show" style="background-image:url('img/img1.jpg');"></div>	
+<div class="banner" style="background-image:url('img/img2.jpg');"></div>
+<div class="banner" style="background-image:url('img/img3.jpg');"></div>
+<div class="banner" style="background-image:url('img/img4.jpg');"></div>
+<div class="banner" style="background-image:url('img/img5.jpg');"></div>
+<div class="banner" style="background-image:url('img/img6.jpg');"></div>
+<div class="banner" style="background-image:url('img/img7.jpg');"></div>
+<div class="banner" style="background-image:url('img/img8.jpg');"></div>
+<div class="banner" style="background-image:url('img/img9.jpg');"></div>
+<div class="banner" style="background-image:url('img/img10.jpg');"></div>
 </div>
 </div>
 
@@ -231,7 +241,7 @@ body {margin:0;display:block;font-weight: 700; font: 300 normal 15px/1.4 Raleway
 </div>
 
 
-<div class="container" style="border:0; height:; padding-top:10px; background-color:#DEE9FC; overflow:hidden;">
+<div class="container section9" style=";">
 
 	<div class="col-sm-3 xs-hidden">
 	<img src="img/f.jpg" class="sm" href="">
@@ -250,7 +260,7 @@ body {margin:0;display:block;font-weight: 700; font: 300 normal 15px/1.4 Raleway
 		<img class="logofooter2" src="img/translogo2.png">
 </div>
 <div class="col-sm-3" style="color:#091834;">
-	Flat:91, Building:205, Road:2803,<br>Block:42, Al Seef.<br>Kingdom of Bahrain, <br>Mobile:00973-33217569<br>Email: info@nexrise-events.com
+	Flat:, Building:, Road:,<br>Block:, Al Seef.<br>Kingdom of Bahrain, <br>Mobile:00973-00000000<br>Email: info@darussalambaharain.com
 </div>
 	<div class="col-sm-3 xs-visible">
 	<img src="img/f.jpg" class="sm" href="">
