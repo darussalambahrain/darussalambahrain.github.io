@@ -1,21 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>NexRise Events</title>
+  <title>Darussalam Public Relations center</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
  <link rel="stylesheet" href="purecss.css">
  <link rel="stylesheet" href="style.css">
- <link rel="icon" href="img/fav-icon.png" type="image/gif" sizes="16x16">
+ <link rel="icon" href="img/tlogo.png" type="image/gif" sizes="16x16">
 <script src="jquery-3.2.1.slim.min.js"></script>
 
 <style>
 
+body {margin:0;display:block;font-weight: 700; font: 300 normal 15px/1.4 Raleway,sans-serif;  letter-spacing: .05em;}
+
+header {display:block; background-color:#FEF3DC; overflow:hidden;}
+.logo {float:left; height:100px; width:200px;}
+.logo2 {float:right; height:100px; width:200px;}
+.contactheader {float:right; text-transform: uppercase; margin-top:22px; padding-right:40px;}
+.contactnumber{ color: #342609; font-weight: 700;font-size: 18px;font-family: Lato,sans-serif;}
+
+/* menubar */
+.menuholder{width:50px;height:30px;float:right;margin:25px 15px 0 0;}
+.menu{height:22px;width:50px;}
+.linebar {border-radius: 2px;height:4px;width:40px;background-color:#342609;}
+.linebar:nth-child(1) {margin-bottom:5px;transition: .5s;}
+.linebar:nth-child(2) {margin-bottom:5px;transition: .5s;}
+.linebar:nth-child(3) {transition: .5s;}
+.menuon{height:30px;width:40px;}
+.menuon>.linebar {margin-left:-5px;margin-right:-10px;}
+.menuon>.linebar:nth-child(1) {transform: rotate(130deg);margin-top:13px;margin-bottom:-5px;}
+.menuon>.linebar:nth-child(2) {opacity: 0;}
+.menuon>.linebar:nth-child(3) {transform: rotate(-130deg);margin-top:-8px;}
+
 /* navigation */
+.nav {border:0; overflow:hidden; height:;width:100%; background-color:#342609; position:sticky; top:0; position: -webkit-sticky;}
+.nav>ul {list-style-type:none; margin:0; padding:0; overflow:hidden; width:425px;margin:auto;}
+.nav>ul>li {float:left;  display:block; }
+.nav a {padding:10px 12px; display:block; background-color:#342609;position: relative;z-index:2;overflow:hidden;color:white;text-decoration:none;}
+.nav a::after {position: absolute; content: ''; top:0; left: 50%; width: 0;  height: 100%;  background-color:#FBA90A; transform-origin:center;  transition:0.25s ease;  z-index:-1;}
+.nav a:hover::after {width:100%;left:0;}
+.nav .active {background-color:#FBA90A;}
+.dropdown {float:left;}
+.dropdown-content {display:none;position:absolute;min-width:150px;top:122px;z-index:3;}
+@media only screen and (min-width:768px) {.dropdown:hover .dropdown-content {display:block;} }
+@media only screen and (max-width:768px) {
+.nav>ul>li {float:none;}
+.dropdown-content {top:82px;}
+}
+#toggle {width:50px; height:30px; margin-top:3px; overflow:hidden;}
+.a {display:none;}
+.b {display:block;}
+.arrowimg1 {margin-top:-74px;margin-left:5px;}
+.arrowimg2 {margin-top:4px;margin-left:5px;}
+@media only screen and (max-width:768px) {
+.nav, .nav a {background-color:#342609;}
+.nav .active {background-color:#FBA90A;}
+.hide {display:none;}
+.show {display:block;}
+.dropdown-content {top:199px;}
+.nav>ul {width:300px;}
+}
 
-/* CONTENT */
+/* FOOTER */
+.bottomfooter {background-color:#342609;width:100%;text-align:center;color:#e0e0e0;height:80px; overflow:hidden;}
+.bottomfooter li{display:inline;}
+.bottomfooter ul{padding:25px 0 20px 0;}
 
-body {font: 300 normal 15px/1.4 Raleway,sans-serif;letter-spacing: .05em;}
+
+/* social */
+.sm {height:55px; width:55px;}
+.sm:hover {width:60px;margin-left:-3px;}
+
+.section_button {width:400px; border:; overflow:hidden; margin:auto;height:25px;}
+.button {background-color:purple; height:23px; width:23%; color:white;border-radius:8px; margin:0px 1px; text-align:center; float:left; text-decoration:none; padding:1px;}
+.button:hover {background-color:#663399;}
+@media only screen and (max-width:600px) {.section_button {width:100%;}}
+
+.section9 {border:0; height:; padding-top:10px; background-color:#FEF3DC; overflow:hidden;}
+
+.logofooter {display:block; width:250px; height:150px; margin:auto;}
+.logofooter2 {display:block; max-height:100px; width:100%; max-width:500px; margin:auto;}
+
+
+
+
+
+
 
 .firstblock {background-color:#ee6e12;border:0;margin-top:10px;color:white;}
 .center {height:439px; width:100%; background-position:center center;background-repeat:no-repeat;margin:auto;background-size: cover; }
@@ -25,6 +95,49 @@ body {font: 300 normal 15px/1.4 Raleway,sans-serif;letter-spacing: .05em;}
 .col-sm-6>p,h2 {padding:10px 40px;text-align: justify;font-weight: 500;letter-spacing: .05em;}
 
 
+.border {border:0.1px solid;}
+
+h1 {padding-left:20px;}
+.contact {border:.5px solid; margin:10px 10px 0 10px; border-radius:10px; background-color:#fdf9f9;}
+.contact p{padding:5px 5px 5px 20px;}
+.call::before {background-image:url('img/call2.png');background-size: 25px 25px; display:inline-block; width: 25px; height: 25px; content:"";padding-right:8px;background-repeat:no-repeat;}
+.mail::before {background-image:url('img/mail2.png');background-size: 25px 25px; display:inline-block; width: 25px; height: 25px; content:""; padding-right:8px;background-repeat:no-repeat;}
+.designation::before {background-image:url('img/man2.png');background-size: 25px 25px; display:inline-block; width: 25px; height:25px; content:""; padding-right:8px; background-repeat:no-repeat;}
+.addrblock {width:100%; background-color:#52575b; color:#fff; margin:auto; margin-top:20px; box-sizing: border-box;
+    padding: 10px;}
+
+.mapcontain {max-width:600px;  margin:auto; margin-top:20px;}
+.map {max-width:650px;width:100%;height:250px;border:0;}
+
+
+.mailbox {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
 
 
 </style>
@@ -33,11 +146,12 @@ body {font: 300 normal 15px/1.4 Raleway,sans-serif;letter-spacing: .05em;}
 <body>
 
 <header>
-<img src="img/logoeng.png" height="80">
-<img class="xs-hidden logoarb" src="img/logoarb.png" height="80" style="float:right;">
+<img class="logo" src="img/tlogo.png">
+<img class="xs-hidden logo2" src="img/translogo2.png">
+
 <div class="contactheader xs-hidden">
 <span>Contact Us</span><br>
-<span class="contactnumber">00973-33217569</span>
+<span class="contactnumber">17330786</span>
 </div>
 
 <div class="menuholder xs-visible">
@@ -55,76 +169,98 @@ body {font: 300 normal 15px/1.4 Raleway,sans-serif;letter-spacing: .05em;}
 
 <li><a href="index.html">Home</a></li>
 <li><a href="about-us.html">About-us</a></li>
+<li><a href="services.html">Services</a></li>
 <li><a href="gallery.html">Gallery</a></li>
 <li><a class="active" href="contact-us.html">Contact</a></li>
 
 </ul>
 </div>
 
-<div class="container firstblock">
+
+<br>
+<h1>Contact-Us</h1>
+
+<div class="container" style="border:0;">
 
 <div class="col-sm-6">
-<div class="center" style="background-image: url('img/9.jpg');">
+<div class="contact">
+<h2>Muhammed Riyas</h2>
+
+<p class="call">17330786</p>
+<p class="call">36865786</p>
+<p class="call">35453912, 38203943</p>
+<p class="mail">info@darussalambaharain.com</p>
+<p class="designation">Chairman and Chief Executive Officer</p>
+<p class="designation">BSC(zool)</p>
+<p class="designation">MBA (canada)</p>
+<p class="designation">DBM</p>
+<p class="designation">DACM</p>
+<p class="designation">IATA</p>
+<p class="designation">MSW</p>
+<p class="designation">MSW (conslg)</p>
 </div>
 </div>
 
+</div>
 
+<div class="addrblock">
+Bahrain
+</div>
+
+
+<div class="container" style="border:0; background-color:#f2f2f2;">
 <div class="col-sm-6">
-<h2>ABOUT US</h2>	
-<p>
-NexRise Events is a global service provider
-with one of the best business intelligence solutions today around the world with competitive Business to Business platforms,
-Focusing towards Business Events, Business Conferences, Business Trainings and Exhibitions.
-</p>
-<p>
-NexRise has quickly evolved to be one of the best premier in event-planning and designing company's based out of GCC.
-Our people is our strongest assets. The team at NexRise is trained and motivated to think out of the box and to be creative in providing solutions 
-</p>
-</div>
-
-</div>
 
 
-
-<div class="container secondblock">
-
-
-<div class="col-sm-6">
-<h2>OUR VISION</h2>
-<p>
-NexRise was started to do something more. Our true professional, 360 degree approach,
-clear brand vision and experience of working with clients across the industry segments have made us passionate about delivering
-beyond the expectations. We like to nurture your brand, understand what you have in mind and translate it into a well-planned,
-innovative and well-organized event. 
-</p>
-<p>
-At NexRise, our success is built upon listening, respecting, understanding and complimenting some of the most successful individuals,
-companies and brands around the world. NexRise is well recognized expert in the field of special event-planning,
-training programs, conferences, exhibitions and concert management.
-</p>
-<p>
-We strive to provide true value to our global clientele by promoting their products, services and
-ideologies through our uniquely conceptualized events and marketing solutions.
+<div class="mapcontain">
+<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d337.0537260719575!2d50.53454927714327!3d26.240215671267755!2m3!1f90!2f39.41789957698271!3f0!3m2!1i1024!2i768!4f35!3m3!1m2!1s0x0%3A0xa9598925b58eb298!2sACT+Pro+Consultancy+%26+Business+Services!5e1!3m2!1sen!2sin!4v1509918581144" frameborder="0" style="border:0" allowfullscreen></iframe>
+<p class="call">
+00973-33217569</p>
+<p class="mail">info@nexrise-events.com
 </p>
 </div>
 
 
-<div class="col-sm-6">
-<div class="center" style="background-image: url('img/d3.jpg');">
+</div>
+
+<div class="col-sm-6 mailbox">
+
+  <form action="" method="post">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="Bahrain">Bahrain</option>
+      <option value="UAE">UAE</option>
+      <option value="Saudi Arabia">Saudi Arabia</option>
+      <option value="Oman">Oman</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" name="submit" value="Submit">
+  </form>
+
 </div>
 </div>
 
 
-</div>
 
-<div class="container" style="border:0; height:; padding-top:10px; background-color:grey; overflow:hidden;">
 
-<div class="col-sm-3 xs-hidden">
-	<img src="img/f.jpg" class="sm" href="https://www.facebook.com/NexRise-Events-SPC-1437870999658149/">
-<!--	<img src="img/t.jpg" class="sm">
-	<img src="img/g.jpg" class="sm"> -->
-	<img src="img/in.jpg" class="sm" href="https://www.linkedin.com/company/13428478/">
-</div>
+
+<div class="container section9" style=";">
+
+	<div class="col-sm-3 xs-hidden">
+	<img src="img/f.jpg" class="sm" href="">
+	<img src="img/t.jpg" class="sm" href="">
+	<img src="img/g.jpg" class="sm" href="">
+	<img src="img/in.jpg" class="sm" href="">
+	</div>
 <div class="col-sm-6" style=""><br>
 	<div class="section_button">
 		<a class="button" href="index.html" >home</a>
@@ -132,17 +268,17 @@ ideologies through our uniquely conceptualized events and marketing solutions.
 		<a class="button" href="events.html" >events</a>
 		<a class="button" href="contact.html" >contact</a>
 	</div><br>
-		<img class="logoengfooter" src="img/logoeng.png">
-		<img class="logoarbfooter" src="img/logoarb.png">
+		<img class="logofooter" src="img/tlogo.png">
+		<img class="logofooter2" src="img/translogo2.png">
 </div>
-<div class="col-sm-3" style="color:white;">
-	Flat:91, Building:205, Road:2803,<br>Block:42, Al Seef.<br>Kingdom of Bahrain, <br>Mobile:00973-33217569<br>Email: info@nexrise-events.com
+<div class="col-sm-3" style="color:#091834;">
+	Flat:, Building:, Road:,<br>Block:, Al Seef.<br>Kingdom of Bahrain, <br>Mobile:00973-00000000<br>Email: info@darussalambaharain.com
 </div>
 	<div class="col-sm-3 xs-visible">
-	<img src="img/f.jpg" class="sm" href="https://www.facebook.com/NexRise-Events-SPC-1437870999658149/">
-<!--	<img src="img/t.jpg" class="sm">
-	<img src="img/g.jpg" class="sm"> -->
-	<img src="img/in.jpg" class="sm" href="https://www.linkedin.com/company/13428478/">
+	<img src="img/f.jpg" class="sm" href="">
+	<img src="img/t.jpg" class="sm" href="">
+	<img src="img/g.jpg" class="sm" href="">
+	<img src="img/in.jpg" class="sm" href="">
 	</div>
 
 </div>
@@ -185,6 +321,8 @@ $(document).ready(function(){
 	
 
 });
+
+
 
 	</script>
 </body>

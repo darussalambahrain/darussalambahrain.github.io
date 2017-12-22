@@ -1,30 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>NexRise Events</title>
+  <title>Darussalam Public Relations center</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
  <link rel="stylesheet" href="purecss.css">
  <link rel="stylesheet" href="style.css">
- <link rel="icon" href="img/fav-icon.png" type="image/gif" sizes="16x16">
+ <link rel="icon" href="img/tlogo.png" type="image/gif" sizes="16x16">
 <script src="jquery-3.2.1.slim.min.js"></script>
 
 <style>
 
+body {margin:0;display:block;font-weight: 700; font: 300 normal 15px/1.4 Raleway,sans-serif;  letter-spacing: .05em;}
+
+header {display:block; background-color:#FEF3DC; overflow:hidden;}
+.logo {float:left; height:100px; width:200px;}
+.logo2 {float:right; height:100px; width:200px;}
+.contactheader {float:right; text-transform: uppercase; margin-top:22px; padding-right:40px;}
+.contactnumber{ color: #342609; font-weight: 700;font-size: 18px;font-family: Lato,sans-serif;}
+
+/* menubar */
+.menuholder{width:50px;height:30px;float:right;margin:25px 15px 0 0;}
+.menu{height:22px;width:50px;}
+.linebar {border-radius: 2px;height:4px;width:40px;background-color:#342609;}
+.linebar:nth-child(1) {margin-bottom:5px;transition: .5s;}
+.linebar:nth-child(2) {margin-bottom:5px;transition: .5s;}
+.linebar:nth-child(3) {transition: .5s;}
+.menuon{height:30px;width:40px;}
+.menuon>.linebar {margin-left:-5px;margin-right:-10px;}
+.menuon>.linebar:nth-child(1) {transform: rotate(130deg);margin-top:13px;margin-bottom:-5px;}
+.menuon>.linebar:nth-child(2) {opacity: 0;}
+.menuon>.linebar:nth-child(3) {transform: rotate(-130deg);margin-top:-8px;}
+
 /* navigation */
+.nav {border:0; overflow:hidden; height:;width:100%; background-color:#342609; position:sticky; top:0; position: -webkit-sticky;}
+.nav>ul {list-style-type:none; margin:0; padding:0; overflow:hidden; width:425px;margin:auto;}
+.nav>ul>li {float:left;  display:block; }
+.nav a {padding:10px 12px; display:block; background-color:#342609;position: relative;z-index:2;overflow:hidden;color:white;text-decoration:none;}
+.nav a::after {position: absolute; content: ''; top:0; left: 50%; width: 0;  height: 100%;  background-color:#FBA90A; transform-origin:center;  transition:0.25s ease;  z-index:-1;}
+.nav a:hover::after {width:100%;left:0;}
+.nav .active {background-color:#FBA90A;}
+.dropdown {float:left;}
+.dropdown-content {display:none;position:absolute;min-width:150px;top:122px;z-index:3;}
+@media only screen and (min-width:768px) {.dropdown:hover .dropdown-content {display:block;} }
+@media only screen and (max-width:768px) {
+.nav>ul>li {float:none;}
+.dropdown-content {top:82px;}
+}
+#toggle {width:50px; height:30px; margin-top:3px; overflow:hidden;}
+.a {display:none;}
+.b {display:block;}
+.arrowimg1 {margin-top:-74px;margin-left:5px;}
+.arrowimg2 {margin-top:4px;margin-left:5px;}
+@media only screen and (max-width:768px) {
+.nav, .nav a {background-color:#342609;}
+.nav .active {background-color:#FBA90A;}
+.hide {display:none;}
+.show {display:block;}
+.dropdown-content {top:199px;}
+.nav>ul {width:300px;}
+}
 
-/* CONTENT */
-
-body {font: 300 normal 15px/1.4 Raleway,sans-serif;letter-spacing: .05em;}
-
-.firstblock {background-color:#ee6e12;border:0;margin-top:10px;color:white;}
-.center {height:439px; width:100%; background-position:center center;background-repeat:no-repeat;margin:auto;background-size: cover; }
-.secondblock {background-color:#626262;color:white;border:0;margin-top:10px;margin-bottom:10px;}
-
-.col-sm-6 {padding:0;}
-.col-sm-6>p,h2 {padding:10px 40px;text-align: justify;font-weight: 500;letter-spacing: .05em;}
+/* FOOTER */
+.bottomfooter {background-color:#342609;width:100%;text-align:center;color:#e0e0e0;height:80px; overflow:hidden;}
+.bottomfooter li{display:inline;}
+.bottomfooter ul{padding:25px 0 20px 0;}
 
 
+/* social */
+.sm {height:55px; width:55px;}
+.sm:hover {width:60px;margin-left:-3px;}
+
+.section_button {width:400px; border:; overflow:hidden; margin:auto;height:25px;}
+.button {background-color:purple; height:23px; width:23%; color:white;border-radius:8px; margin:0px 1px; text-align:center; float:left; text-decoration:none; padding:1px;}
+.button:hover {background-color:#663399;}
+@media only screen and (max-width:600px) {.section_button {width:100%;}}
+
+.section9 {border:0; height:; padding-top:10px; background-color:#FEF3DC; overflow:hidden;}
+
+.logofooter {display:block; width:250px; height:150px; margin:auto;}
+.logofooter2 {display:block; max-height:100px; width:100%; max-width:500px; margin:auto;}
+
+
+
+
+
+div.gallery {margin: 5px; border: 1px solid #ccc; float: left; width: 180px;}
+div.gallery:hover { border: 1px solid #777;}
+div.gallery img { width: 100%; height: 150px;}
+div.desc { padding: 15px; text-align: center;}
 
 
 </style>
@@ -33,11 +97,12 @@ body {font: 300 normal 15px/1.4 Raleway,sans-serif;letter-spacing: .05em;}
 <body>
 
 <header>
-<img src="img/logoeng.png" height="80">
-<img class="xs-hidden logoarb" src="img/logoarb.png" height="80" style="float:right;">
+<img class="logo" src="img/tlogo.png">
+<img class="xs-hidden logo2" src="img/translogo2.png">
+
 <div class="contactheader xs-hidden">
 <span>Contact Us</span><br>
-<span class="contactnumber">00973-33217569</span>
+<span class="contactnumber">17330786</span>
 </div>
 
 <div class="menuholder xs-visible">
@@ -55,76 +120,398 @@ body {font: 300 normal 15px/1.4 Raleway,sans-serif;letter-spacing: .05em;}
 
 <li><a href="index.html">Home</a></li>
 <li><a href="about-us.html">About-us</a></li>
+<li><a href="services.html">Services</a></li>
 <li><a class="active" href="gallery.html">Gallery</a></li>
 <li><a href="contact-us.html">Contact</a></li>
 
 </ul>
 </div>
 
-<div class="container firstblock">
 
-<div class="col-sm-6">
-<div class="center" style="background-image: url('img/9.jpg');">
-</div>
-</div>
-
-
-<div class="col-sm-6">
-<h2>ABOUT US</h2>	
-<p>
-We are global service provider
-with one of the best business intelligence solutions today around the world with competitive Business to Business platforms,
-Focusing towards Business Events, Business Conferences, Business Trainings and Exhibitions.
-</p>
-<p>
-NexRise has quickly evolved to be one of the best premier in event-planning and designing company's based out of GCC.
-Our people is our strongest assets. The team at NexRise is trained and motivated to think out of the box and to be creative in providing solutions 
-</p>
+<br>
+<div class="gallery">
+  <a target="_blank" href="img/img1.jpg">
+    <img src="img/img1.jpg" alt="img1" width="300" height="200">
+  </a>
+  <div class="desc">image 1</div>
 </div>
 
+<div class="gallery">
+  <a target="_blank" href="img/img2.jpg">
+    <img src="img/img2.jpg" alt="img2" width="300" height="600">
+  </a>
+  <div class="desc">image 2</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img3.jpg">
+    <img src="img/img3.jpg" alt="img3" width="300" height="200">
+  </a>
+  <div class="desc">image 3</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img4.jpg">
+    <img src="img/img4.jpg" alt="img4" width="300" height="200">
+  </a>
+  <div class="desc">image 4</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img5.jpg">
+    <img src="img/img5.jpg" alt="img5" width="300" height="200">
+  </a>
+  <div class="desc">image 5</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img6.jpg">
+    <img src="img/img6.jpg" alt="img6" width="300" height="200">
+  </a>
+  <div class="desc">image 6</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img7.jpg">
+    <img src="img/img7.jpg" alt="img7" width="300" height="200">
+  </a>
+  <div class="desc">image 7</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img8.jpg">
+    <img src="img/img8.jpg" alt="img8" width="300" height="200">
+  </a>
+  <div class="desc">image 8</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img9.jpg">
+    <img src="img/img9.jpg" alt="img9" width="300" height="200">
+  </a>
+  <div class="desc">image 9</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img10.jpg">
+    <img src="img/img10.jpg" alt="img10" width="300" height="200">
+  </a>
+  <div class="desc">image 10</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img11.jpg">
+    <img src="img/img11.jpg" alt="img11" width="300" height="200">
+  </a>
+  <div class="desc">image 11</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img12.jpg">
+    <img src="img/img12.jpg" alt="img12" width="300" height="200">
+  </a>
+  <div class="desc">image 12</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img13.jpg">
+    <img src="img/img13.jpg" alt="img13" width="300" height="200">
+  </a>
+  <div class="desc">image 13</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img14.jpg">
+    <img src="img/img14.jpg" alt="img14" width="300" height="200">
+  </a>
+  <div class="desc">image 14</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/im15.jpg">
+    <img src="img/img15.jpg" alt="img15" width="300" height="200">
+  </a>
+  <div class="desc">image 15</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img16.jpg">
+    <img src="img/img16.jpg" alt="img16" width="300" height="200">
+  </a>
+  <div class="desc">image 16</div>
+</div>
+<div class="gallery">
+  <a target="_blank" href="img/img17.jpg">
+    <img src="img/img17.jpg" alt="img17" width="300" height="200">
+  </a>
+  <div class="desc">image 17</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img18.jpg">
+    <img src="img/img18.jpg" alt="img18" width="300" height="200">
+  </a>
+  <div class="desc">image 18</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img19.jpg">
+    <img src="img/img19.jpg" alt="img19" width="300" height="200">
+  </a>
+  <div class="desc">image 19</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img20.jpg">
+    <img src="img/img20.jpg" alt="img20" width="300" height="200">
+  </a>
+  <div class="desc">image 20</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img21.jpg">
+    <img src="img/img21.jpg" alt="img21" width="300" height="200">
+  </a>
+  <div class="desc">image 21</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img22.jpg">
+    <img src="img/img22.jpg" alt="img22" width="300" height="200">
+  </a>
+  <div class="desc">image 22</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img23.jpg">
+    <img src="img/img23.jpg" alt="img23" width="300" height="200">
+  </a>
+  <div class="desc">image 23</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img24.jpg">
+    <img src="img/img24.jpg" alt="img24" width="300" height="200">
+  </a>
+  <div class="desc">image 24</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img25.jpg">
+    <img src="img/img25.jpg" alt="img25" width="300" height="200">
+  </a>
+  <div class="desc">image 25</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img26.jpg">
+    <img src="img/img26.jpg" alt="img26" width="300" height="200">
+  </a>
+  <div class="desc">image 26</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img27.jpg">
+    <img src="img/img27.jpg" alt="img27" width="300" height="200">
+  </a>
+  <div class="desc">image 27</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img28.jpg">
+    <img src="img/img28.jpg" alt="img28" width="300" height="200">
+  </a>
+  <div class="desc">image 28</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img29.jpg">
+    <img src="img/img29.jpg" alt="img29" width="300" height="200">
+  </a>
+  <div class="desc">image 29</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img30.jpg">
+    <img src="img/img30.jpg" alt="img30" width="300" height="200">
+  </a>
+  <div class="desc">image 30</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img31.jpg">
+    <img src="img/img31.jpg" alt="img31" width="300" height="200">
+  </a>
+  <div class="desc">image 31</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img32.jpg">
+    <img src="img/img32.jpg" alt="img32" width="300" height="200">
+  </a>
+  <div class="desc">image 32</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img33.jpg">
+    <img src="img/img33.jpg" alt="img33" width="300" height="200">
+  </a>
+  <div class="desc">image 33</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img34.jpg">
+    <img src="img/img34.jpg" alt="img34" width="300" height="200">
+  </a>
+  <div class="desc">image 34</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img35.jpg">
+    <img src="img/img35.jpg" alt="img35" width="300" height="200">
+  </a>
+  <div class="desc">image 35</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img36.jpg">
+    <img src="img/img36.jpg" alt="img36" width="300" height="200">
+  </a>
+  <div class="desc">image 36</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img37.jpg">
+    <img src="img/img37.jpg" alt="img37" width="300" height="200">
+  </a>
+  <div class="desc">image 37</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img38.jpg">
+    <img src="img/img38.jpg" alt="img38" width="300" height="200">
+  </a>
+  <div class="desc">image 38</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img39.jpg">
+    <img src="img/img39.jpg" alt="img39" width="300" height="200">
+  </a>
+  <div class="desc">image 39</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img40.jpg">
+    <img src="img/img40.jpg" alt="img40" width="300" height="200">
+  </a>
+  <div class="desc">image 40</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img41.jpg">
+    <img src="img/img41.jpg" alt="img41" width="300" height="200">
+  </a>
+  <div class="desc">image 41</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img42.jpg">
+    <img src="img/img42.jpg" alt="img42" width="300" height="200">
+  </a>
+  <div class="desc">image 42</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img43.jpg">
+    <img src="img/img43.jpg" alt="img43" width="300" height="200">
+  </a>
+  <div class="desc">image 43</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img44.jpg">
+    <img src="img/img44.jpg" alt="img44" width="300" height="200">
+  </a>
+  <div class="desc">image 44</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img45.jpg">
+    <img src="img/img45.jpg" alt="img45" width="300" height="200">
+  </a>
+  <div class="desc">image 45</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img46.jpg">
+    <img src="img/img46.jpg" alt="img46" width="300" height="200">
+  </a>
+  <div class="desc">image 46</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img47.jpg">
+    <img src="img/img47.jpg" alt="img47" width="300" height="200">
+  </a>
+  <div class="desc">image 47</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img48.jpg">
+    <img src="img/img48.jpg" alt="img48" width="300" height="200">
+  </a>
+  <div class="desc">image 48</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img49.jpg">
+    <img src="img/img49.jpg" alt="img49" width="300" height="200">
+  </a>
+  <div class="desc">image 49</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img50.jpg">
+    <img src="img/img50.jpg" alt="img50" width="300" height="200">
+  </a>
+  <div class="desc">image 50</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img51.jpg">
+    <img src="img/img51.jpg" alt="img51" width="300" height="200">
+  </a>
+  <div class="desc">image 51</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img52.jpg">
+    <img src="img/img52.jpg" alt="img52" width="300" height="200">
+  </a>
+  <div class="desc">image 52</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img/img53.jpg">
+    <img src="img/img53.jpg" alt="img53" width="300" height="200">
+  </a>
+  <div class="desc">image 53</div>
 </div>
 
 
 
-<div class="container secondblock">
 
 
-<div class="col-sm-6">
-<h2>OUR VISION</h2>
-<p>
-We started to do something more. Our true professional, 360 degree approach,
-clear brand vision and experience of working with clients across the industry segments have made us passionate about delivering
-beyond the expectations. We like to nurture your brand, understand what you have in mind and translate it into a well-planned,
-innovative and well-organized event. 
-</p>
-<p>
-Our success is built upon listening, respecting, understanding and complimenting some of the most successful individuals,
-companies and brands around the world. We are well recognized expert in the field of special event-planning,
-training programs, conferences, exhibitions and concert management.
-</p>
-<p>
-We strive to provide true value to our global clientele by promoting their products, services and
-ideologies through our uniquely conceptualized events and marketing solutions.
-</p>
-</div>
 
+<div class="container section9" style=";">
 
-<div class="col-sm-6">
-<div class="center" style="background-image: url('img/d3.jpg');">
-</div>
-</div>
-
-
-</div>
-
-<div class="container" style="border:0; height:; padding-top:10px; background-color:grey; overflow:hidden;">
-
-<div class="col-sm-3 xs-hidden">
-	<img src="img/f.jpg" class="sm" href="https://www.facebook.com/NexRise-Events-SPC-1437870999658149/">
-<!--	<img src="img/t.jpg" class="sm">
-	<img src="img/g.jpg" class="sm"> -->
-	<img src="img/in.jpg" class="sm" href="https://www.linkedin.com/company/13428478/">
-</div>
+	<div class="col-sm-3 xs-hidden">
+	<img src="img/f.jpg" class="sm" href="">
+	<img src="img/t.jpg" class="sm" href="">
+	<img src="img/g.jpg" class="sm" href="">
+	<img src="img/in.jpg" class="sm" href="">
+	</div>
 <div class="col-sm-6" style=""><br>
 	<div class="section_button">
 		<a class="button" href="index.html" >home</a>
@@ -132,17 +519,17 @@ ideologies through our uniquely conceptualized events and marketing solutions.
 		<a class="button" href="events.html" >events</a>
 		<a class="button" href="contact.html" >contact</a>
 	</div><br>
-		<img class="logoengfooter" src="img/logoeng.png">
-		<img class="logoarbfooter" src="img/logoarb.png">
+		<img class="logofooter" src="img/tlogo.png">
+		<img class="logofooter2" src="img/translogo2.png">
 </div>
-<div class="col-sm-3" style="color:white;">
-	Flat:91, Building:205, Road:2803,<br>Block:42, Al Seef.<br>Kingdom of Bahrain, <br>Mobile:00973-33217569<br>Email: info@nexrise-events.com
+<div class="col-sm-3" style="color:#091834;">
+	Flat:, Building:, Road:,<br>Block:, Al Seef.<br>Kingdom of Bahrain, <br>Mobile:00973-00000000<br>Email: info@darussalambaharain.com
 </div>
 	<div class="col-sm-3 xs-visible">
-	<img src="img/f.jpg" class="sm" href="https://www.facebook.com/NexRise-Events-SPC-1437870999658149/">
-<!--	<img src="img/t.jpg" class="sm">
-	<img src="img/g.jpg" class="sm"> -->
-	<img src="img/in.jpg" class="sm" href="https://www.linkedin.com/company/13428478/">
+	<img src="img/f.jpg" class="sm" href="">
+	<img src="img/t.jpg" class="sm" href="">
+	<img src="img/g.jpg" class="sm" href="">
+	<img src="img/in.jpg" class="sm" href="">
 	</div>
 
 </div>
@@ -185,6 +572,8 @@ $(document).ready(function(){
 	
 
 });
+
+
 
 	</script>
 </body>
