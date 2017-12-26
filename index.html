@@ -8,6 +8,8 @@
  <link rel="stylesheet" href="style.css">
  <link rel="icon" href="img/tlogo.png" type="image/gif" sizes="16x16">
 <script src="jquery-3.2.1.slim.min.js"></script>
+		<script src="http://code.jquery.com/jquery-1.8.2.min.js" type="text/javascript"></script>
+		<script src="jquery.carouFredSel-6.2.0-packed.js" type="text/javascript"></script>
 
 <style>
 
@@ -85,11 +87,18 @@ header {display:block; background-color:#FEF3DC; overflow:hidden;}
 
 
 
-#slideshow {width:100%; height:400px; overflow:hidden; border:;}
-.banner {display:none; height:400px; background-position:center center; background-repeat:no-repeat; background-color:#FDCD6D; background-size:auto 100%; opacity: 0.5; transition:opacity 1s;}
-.show {display:block; opacity: 1.0;}
-@media only screen and (max-width:768px){
-.banner {background-size:auto 100%;}}
+#wrapper {	background-color: #fff;	width: 100%;	height: 450px;	overflow: hidden;	position:relative;}
+#carousel img {	display: block;	float: left;}
+#prev, #next {	background-color: rgba(255, 255, 255, 0.7);	display: block;	height: 450px;	width: 50%;	top: 0;	position: absolute;}
+#prev:hover, #next:hover {	background-color: #fff;	background-color: rgba(255, 255, 255, 0.8);}
+#prev {	left: -495px;}
+#next {	right: -495px;}
+
+#pager {	margin-left: -470px;	position: absolute;	left: 50%;	bottom: 10px;}
+#pager a {	border: 2px solid #fff;	border-radius: 10px;	display: inline-block;	width: 10px;	height: 10px;	margin: 0 5px 0 0;}
+#pager a:hover {	background-color: rgba(255, 255, 255, 0.5);}
+#pager a span {	display: none;}
+#pager a.selected {	background-color: #fff;}
 
 
 .about>h2 {text-align:center; color:red; text-transform:uppercase;}
@@ -143,19 +152,22 @@ header {display:block; background-color:#FEF3DC; overflow:hidden;}
 <br>
 
 
-<div class="container" style="border: 0;">
-<div id="slideshow">
-<div class="banner show" style="background-image:url('img/img1.jpg');"></div>	
-<div class="banner" style="background-image:url('img/img2.jpg');"></div>
-<div class="banner" style="background-image:url('img/img3.jpg');"></div>
-<div class="banner" style="background-image:url('img/img4.jpg');"></div>
-<div class="banner" style="background-image:url('img/img5.jpg');"></div>
-<div class="banner" style="background-image:url('img/img6.jpg');"></div>
-<div class="banner" style="background-image:url('img/img7.jpg');"></div>
-<div class="banner" style="background-image:url('img/img8.jpg');"></div>
-<div class="banner" style="background-image:url('img/img9.jpg');"></div>
-<div class="banner" style="background-image:url('img/img10.jpg');"></div>
-</div>
+<div id="wrapper">
+	<div id="carousel">
+		<img src="img/img1.jpg" alt="img1" width="990" height="450" />
+		<img src="img/img2.jpg" alt="img2" width="990" height="450" />
+		<img src="img/img3.jpg" alt="img3" width="990" height="450" />
+		<img src="img/img4.jpg" alt="img4" width="990" height="450" />
+		<img src="img/img5.jpg" alt="img5" width="990" height="450" />
+		<img src="img/img6.jpg" alt="img6" width="990" height="450" />
+		<img src="img/img71.jpg" alt="img7" width="990" height="450" />
+		<img src="img/img8.jpg" alt="img8" width="990" height="450" />
+		<img src="img/img9.jpg" alt="img9" width="990" height="450" />
+		<img src="img/img10.jpg" alt="img10" width="990" height="450" />
+	</div>
+	<a href="#" id="prev" title="Show previous"> </a>
+	<a href="#" id="next" title="Show next"> </a>
+	<div id="pager"></div>
 </div>
 
 <br>
@@ -250,12 +262,7 @@ header {display:block; background-color:#FEF3DC; overflow:hidden;}
 	<img src="img/in.jpg" class="sm" href="">
 	</div>
 <div class="col-sm-6" style=""><br>
-	<div class="section_button">
-		<a class="button" href="index.html" >home</a>
-		<a class="button" href="about-us.html" >about</a>
-		<a class="button" href="events.html" >events</a>
-		<a class="button" href="contact.html" >contact</a>
-	</div><br>
+
 		<img class="logofooter" src="img/tlogo.png">
 		<img class="logofooter2" src="img/translogo2.png">
 </div>
@@ -311,27 +318,26 @@ $(document).ready(function(){
 });
 
 // SLIDES //
-var slide = 0;
-var timer = 3000;
-setTimeout(function(){
-
-var slidenos = document.getElementById("slideshow").children;
-
-if (slide >= slidenos.length-1) {
-	slidenos[slide].classList.remove('show');
-	slide = 0;
-	slidenos[slide].classList.add('show');
-}
-else {
-	slidenos[slide].classList.remove('show');
-	slide++;
-	slidenos[slide].classList.add('show');
-}
-
-console.log(slide, slidenos.length-1);
-
-	setTimeout(arguments.callee, timer);
-}, timer);
+$(function() {
+	$('#carousel').carouFredSel({
+		width: '100%',
+		items: {
+			visible: 3,
+			start: -1
+		},
+		scroll: {
+			items: 1,
+			duration: 1000,
+			timeoutDuration: 3000
+		},
+		prev: '#prev',
+		next: '#next',
+		pagination: {
+			container: '#pager',
+			deviation: 1
+		}
+	});
+});
 // SLIDES END //
 
 	</script>
