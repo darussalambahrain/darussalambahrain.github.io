@@ -6,84 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
  <link rel="stylesheet" href="purecss.css">
  <link rel="stylesheet" href="style.css">
+   <script src="myscript.js"></script>
  <link rel="icon" href="img/tlogo.png" type="image/gif" sizes="16x16">
 <script src="jquery-3.2.1.slim.min.js"></script>
 
 <style>
-
-body {margin:0;display:block;font-weight: 700; font: 300 normal 15px/1.4 Raleway,sans-serif;  letter-spacing: .05em;}
-
-header {display:block; background-color:#FEF3DC; overflow:hidden;}
-.logo {float:left; height:100px; width:200px;}
-.logo2 {float:right; height:100px; width:200px;}
-.contactheader {float:right; text-transform: uppercase; margin-top:22px; padding-right:40px;}
-.contactnumber{ color: #342609; font-weight: 700;font-size: 18px;font-family: Lato,sans-serif;}
-
-/* menubar */
-.menuholder{width:50px;height:30px;float:right;margin:25px 15px 0 0;}
-.menu{height:22px;width:50px;}
-.linebar {border-radius: 2px;height:4px;width:40px;background-color:#342609;}
-.linebar:nth-child(1) {margin-bottom:5px;transition: .5s;}
-.linebar:nth-child(2) {margin-bottom:5px;transition: .5s;}
-.linebar:nth-child(3) {transition: .5s;}
-.menuon{height:30px;width:40px;}
-.menuon>.linebar {margin-left:-5px;margin-right:-10px;}
-.menuon>.linebar:nth-child(1) {transform: rotate(130deg);margin-top:13px;margin-bottom:-5px;}
-.menuon>.linebar:nth-child(2) {opacity: 0;}
-.menuon>.linebar:nth-child(3) {transform: rotate(-130deg);margin-top:-8px;}
-
-/* navigation */
-.nav {border:0; overflow:hidden; height:;width:100%; background-color:#342609; position:sticky; top:0; position: -webkit-sticky;}
-.nav>ul {list-style-type:none; margin:0; padding:0; overflow:hidden; width:425px;margin:auto;}
-.nav>ul>li {float:left;  display:block; }
-.nav a {padding:10px 12px; display:block; background-color:#342609;position: relative;z-index:2;overflow:hidden;color:white;text-decoration:none;}
-.nav a::after {position: absolute; content: ''; top:0; left: 50%; width: 0;  height: 100%;  background-color:#FBA90A; transform-origin:center;  transition:0.25s ease;  z-index:-1;}
-.nav a:hover::after {width:100%;left:0;}
-.nav .active {background-color:#FBA90A;}
-.dropdown {float:left;}
-.dropdown-content {display:none;position:absolute;min-width:150px;top:122px;z-index:3;}
-@media only screen and (min-width:768px) {.dropdown:hover .dropdown-content {display:block;} }
-@media only screen and (max-width:768px) {
-.nav>ul>li {float:none;}
-.dropdown-content {top:82px;}
-}
-#toggle {width:50px; height:30px; margin-top:3px; overflow:hidden;}
-.a {display:none;}
-.b {display:block;}
-.arrowimg1 {margin-top:-74px;margin-left:5px;}
-.arrowimg2 {margin-top:4px;margin-left:5px;}
-@media only screen and (max-width:768px) {
-.nav, .nav a {background-color:#342609;}
-.nav .active {background-color:#FBA90A;}
-.hide {display:none;}
-.show {display:block;}
-.dropdown-content {top:199px;}
-.nav>ul {width:300px;}
-}
-
-/* FOOTER */
-.bottomfooter {background-color:#342609;width:100%;text-align:center;color:#e0e0e0;height:80px; overflow:hidden;}
-.bottomfooter li{display:inline;}
-.bottomfooter ul{padding:25px 0 20px 0;}
-
-
-/* social */
-.sm {height:55px; width:55px;}
-.sm:hover {width:60px;margin-left:-3px;}
-
-.section_button {width:400px; border:; overflow:hidden; margin:auto;height:25px;}
-.button {background-color:purple; height:23px; width:23%; color:white;border-radius:8px; margin:0px 1px; text-align:center; float:left; text-decoration:none; padding:1px;}
-.button:hover {background-color:#663399;}
-@media only screen and (max-width:600px) {.section_button {width:100%;}}
-
-.section9 {border:0; height:; padding-top:10px; background-color:#FEF3DC; overflow:hidden;}
-
-.logofooter {display:block; width:250px; height:150px; margin:auto;}
-.logofooter2 {display:block; max-height:100px; width:100%; max-width:500px; margin:auto;}
-
-
-
-
 
 div.gallery {margin: 5px; border: 1px solid #ccc; float: left; width: 180px;}
 div.gallery:hover { border: 1px solid #777;}
@@ -96,36 +23,8 @@ div.desc { padding: 15px; text-align: center;}
 
 <body>
 
-<header>
-<img class="logo" src="img/tlogo.png">
-<img class="xs-hidden logo2" src="img/translogo2.png">
-
-<div class="contactheader xs-hidden">
-<span>Contact Us</span><br>
-<span class="contactnumber">17330786</span>
-</div>
-
-<div class="menuholder xs-visible">
-<div class="menu" id="menubars">
-<div class="linebar"></div>
-<div class="linebar"></div>
-<div class="linebar"></div>
-</div>
-</div>
-</header>
-
-
-<div id="menutoggle" class="nav hide">
-<ul>
-
-<li><a href="index.html">Home</a></li>
-<li><a href="about-us.html">About-us</a></li>
-<li><a href="services.html">Services</a></li>
-<li><a class="active" href="gallery.html">Gallery</a></li>
-<li><a href="contact-us.html">Contact</a></li>
-
-</ul>
-</div>
+<header id="headerspawn"></header>
+<div id="menutoggle" class="nav hide"></div>
 
 
 <br>
@@ -503,51 +402,10 @@ div.desc { padding: 15px; text-align: center;}
 
 
 
-
-<div class="container section9" style=";">
-
-	<div class="col-sm-3 xs-hidden">
-	<img src="img/f.jpg" class="sm" href="">
-	<img src="img/t.jpg" class="sm" href="">
-	<img src="img/g.jpg" class="sm" href="">
-	<img src="img/in.jpg" class="sm" href="">
-	</div>
-<div class="col-sm-6" style=""><br>
-	<div class="section_button">
-		<a class="button" href="index.html" >home</a>
-		<a class="button" href="about-us.html" >about</a>
-		<a class="button" href="events.html" >events</a>
-		<a class="button" href="contact.html" >contact</a>
-	</div><br>
-		<img class="logofooter" src="img/tlogo.png">
-		<img class="logofooter2" src="img/translogo2.png">
-</div>
-<div class="col-sm-3" style="color:#091834;">
-	Flat:, Building:, Road:,<br>Block:, Al Seef.<br>Kingdom of Bahrain, <br>Mobile:00973-00000000<br>Email: info@darussalambaharain.com
-</div>
-	<div class="col-sm-3 xs-visible">
-	<img src="img/f.jpg" class="sm" href="">
-	<img src="img/t.jpg" class="sm" href="">
-	<img src="img/g.jpg" class="sm" href="">
-	<img src="img/in.jpg" class="sm" href="">
-	</div>
-
-</div>
-
-
-
-<div class="bottomfooter">
-
-<ul>
-<li>© Copyright&nbsp;&nbsp;|&nbsp;&nbsp;</li>
-<li>Privacy Policy&nbsp;&nbsp;|&nbsp;&nbsp;</li>
-<li><a style="color:#b3afaf;">Web Design by musab</a></li>
-</ul>
-
-</div>
+<div id="footersection" class="container section9" style=""></div>
+<div id="footer" class="bottomfooter"></div>
   
-
-
+  
 
 <script>
 $(document).ready(function(){
@@ -573,7 +431,9 @@ $(document).ready(function(){
 
 });
 
+myFunction();
 
+document.getElementById("gallery").classList.add("active");
 
 	</script>
 </body>
