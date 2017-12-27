@@ -1,13 +1,13 @@
 body {margin:0;display:block;font-weight: 700; font: 300 normal 15px/1.4 Raleway,sans-serif;  letter-spacing: .05em;}
 
 header {display:block; background-color:#FEF3DC; overflow:hidden;}
-.logo {float:left; height:100px; width:200px;}
-.logo2 {float:right; height:100px; width:200px;}
-.contactheader {float:right; text-transform: uppercase; margin-top:22px; padding-right:40px;}
-.contactnumber{ color: #342609; font-weight: 700;font-size: 18px;font-family: Lato,sans-serif;}
+.logo {float:left; height:130px; width:200px;}
+.logo2 {float:right; height:100px; width:200px; padding-top:20px;}
+.contactheader {float:right; text-transform: uppercase; margin-top:42px; padding-right:40px;}
+.contactnumber{ color: #fba90a; font-weight: 700;font-size: 18px;font-family: Lato,sans-serif;}
 
 /* menubar */
-.menuholder{width:50px;height:30px;float:right;margin:25px 15px 0 0;}
+.menuholder{width:50px;height:30px;float:right;margin:55px 15px 0 0;}
 .menu{height:22px;width:50px;}
 .linebar {border-radius: 2px;height:4px;width:40px;background-color:#342609;}
 .linebar:nth-child(1) {margin-bottom:5px;transition: .5s;}
@@ -63,10 +63,10 @@ header {display:block; background-color:#FEF3DC; overflow:hidden;}
 .button:hover {background-color:#663399;}
 @media only screen and (max-width:600px) {.section_button {width:100%;}}
 
-.section9 {border:0; height:; padding-top:10px; background-color:#FEF3DC; overflow:hidden;}
+.section9 {border:0; height:; padding-top:10px; background-color:#fffccf; overflow:hidden;}
 
 .logofooter {display:block; width:250px; height:150px; margin:auto;}
 .logofooter2 {display:block; max-height:100px; width:100%; max-width:500px; margin:auto;}
 
-
+.contacticon {height:22px; width:22px; margin-bottom:-5px;}
 
