@@ -5,6 +5,6 @@ function myFunction() {
 
    document.getElementById("footersection").innerHTML = "<div class='col-sm-3 xs-hidden'><img src='img/f.jpg' class='sm' href=''><img src='img/t.jpg' class='sm' href=''><img src='img/g.jpg' class='sm' href=''><img src='img/in.jpg' class='sm' href=''></div><div class='col-sm-6' style=''><br>	<img class='logofooter' src='img/logo3.jpg'> <img class='logofooter2' src='img/translogo2.png'></div><div class='col-sm-3' style='color:#091834;'>Flat:, Building:, Road:,<br>Block:, Al Seef.<br>Kingdom of Bahrain, <br><img class='contacticon' src='img/mobile.jpg'>17330786<img class='contacticon' src='img/whatsapp.jpg'>36865786<br><img class='contacticon' src='img/mail.jpg'> info@darussalambaharain.com</div>	<div class='col-sm-3 xs-visible'>	<img src='img/f.jpg' class='sm' href=''>	<img src='img/t.jpg' class='sm' href=''>	<img src='img/g.jpg' class='sm' href=''>	<img src='img/in.jpg' class='sm' href=''>	</div>";
 
-   document.getElementById("footer").innerHTML = "<ul><li>© Copyright&nbsp;&nbsp;|&nbsp;&nbsp;</li><li>Privacy Policy&nbsp;&nbsp;|&nbsp;&nbsp;</li><li><a style='color:#b3afaf;'>Web Design by musab</a></li></ul>";
+   document.getElementById("footer").innerHTML = "<ul><li>© Copyright&nbsp;&nbsp;|&nbsp;&nbsp;</li><li>Privacy Policy&nbsp;&nbsp;|&nbsp;&nbsp;</li><li><a style='color:#5a3b11;'>Web Design by musab</a></li></ul>";
    
 }
