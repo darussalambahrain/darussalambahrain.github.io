@@ -23,7 +23,10 @@
 .border {border:0.1px solid;}
 
 h1 {padding-left:20px;}
-.contact {border:.5px solid; margin:10px 10px 0 10px; border-radius:10px; background-color:#fdf9f9; overflow:hidden;}
+.contact {border:.5px solid; margin:10px 10px 0 10px; border-radius:10px; background-color:#fdf9f9; overflow:hidden; width:70%; margin:auto;}
+@media only screen and (max-width:768px) {
+.contact {width:98%}
+}
 .contact p{padding: 0px 10px;}
 .contact>img{float:left; width:35%;}
 .contactside {display:block; width:65%; border:; float:right;}
@@ -77,26 +80,32 @@ input[type=submit]:hover {
 <br>
 <h1>Contact-Us</h1>
 
-<div class="container" style="border:0;">
+<div class="container contact" style="">
+<h2 style="text-align:center; background-color:orange; margin:0 0 20px 0;">Have any questions please contact us:</h2>
+<div class="col-sm-6" style="margin:auto;">
 
+<table style="margin-left:40px;">
+  <tr>
+    <td>Working Hours :</td>
+    <td>10.00AM to 1.00 PM</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>4.00PM to 9.00 PM</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Saturday to Thursday</td>
+  </tr>
+</table>
+
+</div>
 <div class="col-sm-6">
-<div class="contact">
-
-<h2>Have any questions please contact us:</h2>
-<p>Working Hours :<br>
-&nbsp; &nbsp; &nbsp; 10.00AM to 1.00 PM<br>
-&nbsp; &nbsp; &nbsp; 4.00PM to 9.00 PM<br>
-&nbsp; &nbsp; &nbsp; Saturday to Thursday
-</p>
 <p class="call"><img class='contacticon' src='img/mobile.png'>00973 17330786<br>
 <p class="call"><img class='contacticon' src='img/whatsapp.png'>00973 36865786<br>
-
-<p class="mail"><img class='contacticon' src='img/mail.png'>
-darussalambaharain@gmail.com
-</p>
-
+<p class="mail"><img class='contacticon' src='img/mail.png'>darussalambaharain@gmail.com</p>
 </div>
-</div>
+
 
 </div>
 
