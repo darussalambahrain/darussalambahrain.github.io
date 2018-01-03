@@ -1,9 +1,9 @@
-body {margin:0;display:block;font-weight: 700; font: 300 normal 15px/1.4 Raleway,sans-serif;  letter-spacing: .05em;}
+body {margin:0;display:block;font-weight: 700; font: 300 normal 15px/1.4 Raleway,sans-serif;  letter-spacing: .05em; background-color:#f1f1f3;}
 
-header {display:block; background-color:#FEF3DC; overflow:hidden;}
-.logo {float:left; height:130px; width:200px;}
-.logo2 {float:right; height:100px; width:200px; padding-top:20px;}
-.contactheader {float:right; text-transform: uppercase; margin-top:42px; padding-right:40px;}
+header {display:block; background: linear-gradient(#f1f1f3, #f1f1f3, #dbdcde); overflow:hidden;}
+.logo {float:left; height:110px; width:200px;}
+.logo2 {float:right; height:80px; width:200px; padding-top:20px;}
+.contactheader {float:right; text-transform: uppercase; margin-top:25px; padding-right:40px;}
 .contactnumber{ color: #fba90a; font-weight: 700;font-size: 18px;font-family: Lato,sans-serif;}
 
 /* menubar */
@@ -49,13 +49,16 @@ header {display:block; background-color:#FEF3DC; overflow:hidden;}
 }
 
 /* FOOTER */
-.bottomfooter {background-color:#342609;width:100%;text-align:center;color:#e0e0e0;height:80px; overflow:hidden;}
+.bottomfooter {background-color:#342609;width:100%;text-align:center;color:#e0e0e0;height:80px; overflow:hidden; }
 .bottomfooter li{display:inline;}
 .bottomfooter ul{padding:25px 0 20px 0;}
-
+@media only screen and (max-width:768px) {
+.bottomfooter ul{font-size:12px; padding:0px 0 0px 0;}
+.bottomfooter {height:40px;}
+}
 
 /* social */
-.sm {height:55px; width:55px;}
+.sm {height:35px; width:55px; border-radius:3px;}
 .sm:hover {width:60px;margin-left:-3px;}
 
 .section_button {width:400px; border:; overflow:hidden; margin:auto;height:25px;}
@@ -63,7 +66,7 @@ header {display:block; background-color:#FEF3DC; overflow:hidden;}
 .button:hover {background-color:#663399;}
 @media only screen and (max-width:600px) {.section_button {width:100%;}}
 
-.section9 {border:0; height:; padding-top:10px; background-color:#fffccf; overflow:hidden;}
+.section9 {border:0; height:; padding-top:10px; background: linear-gradient(#f1f1f3, #dbdcde); overflow:hidden;}
 
 .logofooter {display:block; width:250px; height:150px; margin:auto;}
 .logofooter2 {display:block; max-height:100px; width:100%; max-width:500px; margin:auto;}
